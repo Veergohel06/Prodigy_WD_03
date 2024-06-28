@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+body {
+    background-color: #222;
+    background-image: url('w1.jpg'); /* Add your image URL here */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    min-height: 100vh; /* Ensure the body height is at least 100% of the viewport height */
+    display: flex; /* Use flexbox to center the card */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.card {
+    width: 90%;
+    max-width: 900px; /* Increased max-width to accommodate map and weather info side by side */
+    background-color: #21D4FD;
+    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+    color: #fff;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.2); /* Transparent white background */
+    padding: 8px 15px; /* Adjusted padding */
+    border-radius: 30px; /* Rounded corners */
+    margin-bottom: 20px; /* Increased bottom margin */
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background: none; /* Transparent background */
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 15px;
+    height: 40px; /* Reduced height */
+    flex: 1;
+    font-size: 16px; /* Reduced font size */
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: none; /* Transparent background */
+    cursor: pointer;
+}
+
+.search button img {
+    width: 30px;
+    height: auto;
+}
+
+.weatherIcon {
+    width: 200px;
+    margin-top: 30px;
+}
+
+.weather h1 {
+    font-size: 80px;
+    font-weight: 700;
+}
+
+.weather h2 {
+    font-size: 50px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.weather-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px; /* Adjust margin */
+}
+
+.weather {
+    flex: 1;
+    margin-right: 20px; /* Adjust margin */
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+    margin-left: 5px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.humidity, .wind {
+    font-size: 20px;
+    margin-top: -1px;
+}
+
+.sun-times {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.map {
+    flex: 1;
+    width: 100%;
+    height: 0; /* Start with a height of 0 to hide the map */
+    margin-left: 20px; /* Margin between weather info and map */
+    aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+    transition: height 0.3s ease; /* Smooth transition for height change */
+}
+
+.weather {
+    display: none; /* Hide weather info by default */
+}
+
+.error {
+    text-align: left;
+    font-size: 14px;
+    margin-left: 90px;
+    margin-top: 10px;
+    display: none; /* Hide error by default */
+}
