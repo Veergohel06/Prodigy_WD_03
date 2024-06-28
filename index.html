@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <div class="card">
+    <div class="search">
+      <input type="text" id="cityInput" placeholder="Enter city name" spellcheck="false">
+      <button id="searchButton"><img src="search.png" alt="search"></button>
+    </div>
+    <div class="error">
+      <h1>Invalid Input</h1>
+    </div>
+    <div class="weather-container">
+      <div class="weather">
+        <img src="" class="weatherIcon" alt="Weather Icon">
+        <h1 class="temp"></h1>
+        <h2 class="city"></h2>
+        <div class="details">
+          <div class="col">
+            <img src="humidity.png" alt="Humidity Icon">
+            <div>
+              <p class="humidity"></p>
+              <p>Humidity</p>
+            </div>
+          </div>
+          <div class="col">
+            <img src="wind.png" alt="Wind Icon">
+            <div>
+              <p class="wind"></p>
+              <p>Wind Speed</p>
+            </div>
+          </div>
+        </div>
+        <div class="sun-times">
+          <p class="sunrise"></p>
+          <p class="sunset"></p>
+        </div>
+      </div>
+      <div id="map" class="map"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</body>
+</html>
